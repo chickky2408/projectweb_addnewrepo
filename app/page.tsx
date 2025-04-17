@@ -1,5 +1,3 @@
-
-
 'use client'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
@@ -34,8 +32,7 @@ export default function HomePage() {
         <Image
           src="/clinic.jpg"
           alt="clinic"
-          layout="fill"
-          objectFit="cover"
+          fill
           className="absolute top-0 left-0 z-0 opacity-40 blur-sm"
         />
 
@@ -43,7 +40,7 @@ export default function HomePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 2 }}
           className="relative z-10 text-center text-white p-8 bg-black/30 backdrop-blur-md rounded-xl shadow-lg max-w-2xl"
         >
           <h2 className="text-4xl font-bold mb-4 text-blue-200">Trusted Healthcare for You</h2>
@@ -81,6 +78,7 @@ export default function HomePage() {
         <h3 className="text-2xl font-bold text-blue-700 mb-4">Location</h3>
         <p className="text-gray-700 mb-4">We’re located in the heart of the city for easy access.</p>
         <iframe
+          key="google-maps"
           src="https://maps.google.com/maps?q=Bangkok&t=&z=13&ie=UTF8&iwloc=&output=embed"
           className="w-full h-64 rounded-lg shadow-md"
           loading="lazy"
@@ -97,7 +95,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-blue-600 text-white text-center py-4">
-        &copy; {new Date().getFullYear()} DentalEase | All rights reserved.
+        &copy; 2025 HealthCare+ | All rights reserved.
       </footer>
     </div>
   )
